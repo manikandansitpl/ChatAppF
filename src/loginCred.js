@@ -9,7 +9,7 @@ const LoginPage = () => {
   const dispatch = useDispatch()
 
   const loginCrd = {
-    username: 'taxiadmin',
+    username: 'admin',
     password: '12345',
   };
 
@@ -19,6 +19,7 @@ const LoginPage = () => {
       setErrorMessage('');
       dispatch(authname({username:true}))
       sessionStorage.setItem('bool',"true")
+      window.location.reload();
       // Implement your logic here, such as navigating to another page
     } else {
       // Failed login
