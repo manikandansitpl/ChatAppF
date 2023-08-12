@@ -153,6 +153,25 @@ body {
   background-color: #2f3345!important;
   color: white !important;
 }
+.ce-message-form{
+  padding-top: 0px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  padding-top: 4px;
+    width: 100%;
+    position: absolute;
+    bottom: 40px !important;
+}
+.ce-send-message-button{
+  bottom: 0 !important;
+}
+#ce-send-message-button{
+  position: relative;
+  bottom: 0 !important;
+  top: 5px !important;
+  right: 3px !important;
+}
 
 /* login page */
 /* External CSS file or inline styles */

@@ -14,7 +14,7 @@ const LoginPage = () => {
   };
 
   const handleLogin = () => {
-    if (username === loginCrd.username && password === loginCrd.password) {
+    if (username.trim() === loginCrd.username && password.trim() === loginCrd.password) {
       // Successful login
       setErrorMessage('');
       dispatch(authname({username:true}))
