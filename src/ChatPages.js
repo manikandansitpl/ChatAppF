@@ -1,9 +1,8 @@
-import React, { useEffect } from 'react';
+import React from 'react';
 import {
   MultiChatWindow,
   MultiChatSocket,
-  useMultiChatLogic,
-  ChatForm
+  useMultiChatLogic 
 } from 'react-chat-engine-advanced';
 
 function ChatPages(props) {

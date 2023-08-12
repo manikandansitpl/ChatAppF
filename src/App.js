@@ -1,16 +1,16 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 
 import "./App.css";
 import AuthPage from "./AuthPage";
 import ChatPages from "./ChatPages";
 import LoginPage from "./loginCred";
-import { useSelector } from "react-redux";
+// import { useSelector } from "react-redux";
 
 
 
 function App() {
   const [user, setUser] = useState(undefined);
-  const result = useSelector(state=>state.auth.value.username);
+  // const result = useSelector(state=>state.auth.value.username);
   const sess = sessionStorage.getItem('bool');
   if(!sess ){
     return <LoginPage/>

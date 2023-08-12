@@ -1,11 +1,11 @@
 import axios from 'axios';
 import { useEffect } from 'react';
-import { useDispatch, useSelector } from 'react-redux';
+import { useDispatch } from 'react-redux';
 import { authname } from './AuthSlice';
 
 
 const AuthPage = (props) => {
-  const usernameFormRedux = useSelector(state => state.auth.value);
+//   const usernameFormRedux = useSelector(state => state.auth.value);
   const disapatch = useDispatch();
 
     const onSubmit = (e) => {
