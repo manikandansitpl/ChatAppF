@@ -1,25 +1,25 @@
-import logo from './logo.svg';
-import './App.css';
+import { useEffect, useState } from "react";
+
+import "./App.css";
+import AuthPage from "./AuthPage";
+import ChatPages from "./ChatPages";
+import LoginPage from "./loginCred";
+import { useSelector } from "react-redux";
+
+
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+  const [user, setUser] = useState(undefined);
+  const result = useSelector(state=>state.auth.value.username);
+  const sess = sessionStorage.getItem('bool');
+  if(!sess ){
+    return <LoginPage/>
+  }
+  else {if (!user) {
+    return <AuthPage onAuth={(user) => setUser(user)} />;
+  } else {
+    return <ChatPages user={user} />;
+  }}
 }
 
 export default App;
